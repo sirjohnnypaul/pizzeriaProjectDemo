@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Stefano - pizzeria Sopot</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+    }
+    </script>
+
+  </head>
+
+<body>
+
+<div id="first-page-website">
+
+                <div id="top-section">
+
+                  <div class="social-menu-bar" id="social-menu-bar">
+
+                  <button id="facebook-btn" v-bind:href="facebook"></button>
+                  <button id="google-btn" v-bind:href="google"></button>
+                  <button id="instagram-btn" v-bind:href="instagram"></button>
+
+                  </div>
+
+                  <div id="choose-language">
+
+                  <button id="choose-language-1"></button>
+                  <button id="choose-language-2"></button>
+
+                  </div>
+
+                </div>
+
+
+                <h1 id="title-h1">{{title}}</h1>
+
+              <div id="menu-nav-background">
+
+                <div class="topnav" id="myTopnav">
+
+                    <ul>
+                    <a href="#home" class="active">{{homepage}}</a>
+                    <a href="#news">{{menu}}</a>
+                    <a href="#contact">{{order}}</a>
+                    <a href="#about">{{contact}}</a>
+                    <a href="#about">{{promo}}</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                  </ul>
+
+                </div>
+
+              </div>
+
+                <p id="about-section">{{about}}</p>
+
+              <div id="check-our-offer">
+
+                <p id="check-our-offer-button">{{checkout}}</p>
+                <button id="button-offer">{{buttonoffer}}</button>
+
+              </div>
+
+</div>
+
+<div id="second-page-website">
+
+            <div id="top-menu-header">
+
+                <p id="menu-section">{{menu}}</p>
+
+            </div>
+
+            <div id="menu-offer-toggle-bar">
+
+                  <div v-on:click="isShow = !isShow" class="control" id="toggle-bar">
+                  <p>{{pizzastefano}}</p>
+                  </div>
+                  <div id="toggle-bar-toggle" v-show="isShow"  class="content">
+
+                  <div id="item">
+
+                  <p id="item-name">pizza1</p>
+                  <p id="select-cake">{{selectcake}}</p>
+                  <select id="pizza-cake"v-model="selected">
+                  <option disabled value="">Grubość ciasta</option>
+                  <option>Cienkie</option>
+                  <option>Średnie</option>
+                  <option>Grube</option>
+                  </select>
+                  <p id="select-cake-size">{{selectcakesize}}</p>
+                  <select id="pizza-size"v-model="selected">
+                  <option disabled value="">Wielkość</option>
+                  <option>Mała</option>
+                  <option>Duża</option>
+                  </select>
+                  <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                  <button id="addtochart"></button>
+                  <p id="price">{{price}}</p>
+
+                  <p id="ingredients">{{ingredients}}</p>
+                  <br>
+                  <br>
+
+                  <hr>
+
+                  </div>
+
+                  <div id="item">
+
+                  <p id="item-name">pizza1</p>
+                  <p id="select-cake">{{selectcake}}</p>
+                  <select id="pizza-cake"v-model="selected">
+                  <option disabled value="">Grubość ciasta</option>
+                  <option>Cienkie</option>
+                  <option>Średnie</option>
+                  <option>Grube</option>
+                  </select>
+                  <p id="select-cake-size">{{selectcakesize}}</p>
+                  <select id="pizza-size"v-model="selected">
+                  <option disabled value="">Wielkość</option>
+                  <option>Mała</option>
+                  <option>Duża</option>
+                  </select>
+                  <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                  <button id="addtochart"></button>
+                  <p id="price">{{price}}</p>
+
+                  <p id="ingredients">{{ingredients}}</p>
+                  <br>
+                  <br>
+
+                  <hr>
+
+                  </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="menu-offer-toggle-bar2">
+
+                  <div v-on:click="isShow = !isShow" class="control" id="toggle-bar">
+                  <p>{{pizzastefano}}</p>
+                  </div>
+                  <div id="toggle-bar-toggle" v-show="isShow"  class="content">
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                  </div>
+
+            </div>
+
+
+
+
+            <div id="menu-offer-toggle-bar3">
+
+                  <div v-on:click="isShow = !isShow" class="control" id="toggle-bar">
+                  <p>{{pizzastefano}}</p>
+                  </div>
+                  <div id="toggle-bar-toggle" v-show="isShow"  class="content">
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                  </div>
+
+            </div>
+
+
+
+
+            <div id="menu-offer-toggle-bar4">
+
+                  <div v-on:click="isShow = !isShow" class="control" id="toggle-bar">
+                  <p>{{pizzastefano}}</p>
+                  </div>
+                  <div id="toggle-bar-toggle" v-show="isShow"  class="content">
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                  </div>
+
+            </div>
+
+
+            <div id="menu-offer-toggle-bar5">
+
+                  <div v-on:click="isShow = !isShow" class="control" id="toggle-bar">
+                  <p>{{pizzastefano}}</p>
+                  </div>
+                  <div id="toggle-bar-toggle" v-show="isShow"  class="content">
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                  </div>
+
+            </div>
+
+
+            <div id="menu-offer-toggle-bar6">
+
+                  <div v-on:click="isShow = !isShow" class="control" id="toggle-bar">
+                  <p>{{pizzastefano}}</p>
+                  </div>
+                  <div id="toggle-bar-toggle" v-show="isShow"  class="content">
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                    <div id="item">
+
+                    <p id="item-name">pizza1</p>
+                    <p id="select-cake">{{selectcake}}</p>
+                    <select id="pizza-cake"v-model="selected">
+                    <option disabled value="">Grubość ciasta</option>
+                    <option>Cienkie</option>
+                    <option>Średnie</option>
+                    <option>Grube</option>
+                    </select>
+                    <p id="select-cake-size">{{selectcakesize}}</p>
+                    <select id="pizza-size"v-model="selected">
+                    <option disabled value="">Wielkość</option>
+                    <option>Mała</option>
+                    <option>Duża</option>
+                    </select>
+                    <input id="pizza-number" v-model="message" placeholder="  Ilość">
+                    <button id="addtochart"></button>
+                    <p id="price">{{price}}</p>
+
+                    <p id="ingredients">{{ingredients}}</p>
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    </div>
+
+                  
+
+                  </div>
+
+          </div>
+
+
+          <div id="bottom-basket-header">
+
+                <p id="basket-section">{{basket}}</p>
+
+                <div id="basket-items"></div>
+
+          </div>
+
+</div>
+
+<div id="third-page-website">
+
+          <div id="top-client-header">
+
+              <p id="our-client-section">{{client}}</p>
+
+          </div>
+
+          <input placeholder="Twój Email" id="inputemail">{{email}}</input>
+          <input placeholder="Twoje Imię" id="inputname">{{email}}</input>
+
+          <button type="button" id="sendtodatabase">Zapisz się do listy stałych klientów</button>
+
+</div>
+
+
+<div id="fourth-page-website">
+
+        <div id="top-contact-header">
+
+            <p id="our-contact-section">{{contactdata}}</p>
+
+        </div>
+
+            <p id="phone">{{phone}}</p>
+
+        <div id="top-contact-header2">
+
+            <p id="our-contact-section2">{{contactdata1}}</p>
+
+        </div>
+
+        <input placeholder="Twój Email" id="inputemail2">{{email2}}</input>
+        <input placeholder="Twoje Imię" id="inputname2">{{name2}}</input>
+        <input placeholder="Twoja wiadomość" id="inputmessage">{{message2}}</input>
+
+        <button type="button" id="sendtobase">Wyślij</button>
+
+</div>
+
+<footer> <p id="footer-data">{{footerdata}}</p> </footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
